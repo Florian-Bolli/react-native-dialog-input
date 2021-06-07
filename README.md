@@ -1,6 +1,9 @@
 # react-native-dialog-input
 Dialog with input for React Native on iOS and Android.
 
+## Changelog
+I forked this project to make the text input a  prop instead of a state.
+
 ## Examples
 
 ![React Native Dialog Input iOS](https://res.cloudinary.com/joseestrella/image/upload/c_scale,w_279/v1525120807/dialog-ios.png)
@@ -31,6 +34,8 @@ import DialogInput from 'react-native-dialog-input';
  name                  | description                                 | type     
 :--------------------- |:------------------------------------------- | --------
  isDialogVisible       | Condition to show or hide the DialogInput   |   Boolean
+ value                 | Value in the textinput                      |   String (REQUIRED)
+ onChangeText          | is called then teh text is changed          |   Function(REQUIRED)
  title                 | Title to show in the DialogInput            |   String (OPTIONAL)
  message               | Message to show in the DialogInput          |   String (OPTIONAL)
  hintInput             | Text hint to show in the TextInput          |   String (OPTIONAL)
