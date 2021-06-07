@@ -65,7 +65,7 @@ class DialogInput extends PureComponent{
         visible={this.props.isDialogVisible}
       	onRequestClose={this.handleOnRequestClose}>
         <View style={[styles.container, {...modalStyleProps}]}  >
-          <TouchableOpacity style={styles.container} activeOpacity={1} onPress={this.handleOnCloseDialog}>
+          <TouchableOpacity style={styles.container} activeOpacity={1} onPress={()=>{}}>
             <View style={[styles.modal_container, {...dialogStyleProps}]} >
               <View style={styles.modal_body} >
                 <Text style={styles.title_modal}>{title}</Text>
@@ -83,8 +83,8 @@ class DialogInput extends PureComponent{
                   underlineColorAndroid='transparent'
                   placeholder={hintInput}
                   placeholderTextColor={placeholderTextColor}
-                  onChangeText={this.handleOnChangeText}
-                  value={value}
+                  onChangeText={this.props.onChangeText}
+                  value={this.props.value}
                   />
               </View>
               <View style={styles.btn_container}>
